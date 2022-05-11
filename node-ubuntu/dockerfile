@@ -7,8 +7,8 @@ RUN n stable
 RUN apt purge -y nodejs npm
 RUN npm install -g yarn
 
-COPY .zshrc /root/
-COPY .ssh/ /root/.ssh/
+COPY ../.zshrc /root/
+COPY ../.ssh/ /root/.ssh/
 RUN chmod 600 /root/.ssh/*
 WORKDIR /home
 RUN touch /root/.bashrc && echo 'zsh' >> /root/.bashrc
