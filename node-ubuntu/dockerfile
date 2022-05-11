@@ -11,4 +11,4 @@ COPY ../.zshrc /root/
 COPY ../.ssh/ /root/.ssh/
 RUN chmod 600 /root/.ssh/*
 WORKDIR /home
-RUN touch /root/.bashrc && echo 'zsh' >> /root/.bashrc
+RUN chsh -s $(which zsh)
